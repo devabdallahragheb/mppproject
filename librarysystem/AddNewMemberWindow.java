@@ -60,7 +60,7 @@ public class AddNewMemberWindow extends JPanel {
 
         try {
             systemController.addNewMember(street, city, state, zip, memberId, fname, lname, tel);
-            JOptionPane.showMessageDialog(this, "User added!");
+            JOptionPane.showMessageDialog(this, "member  added!");
             streetField.setText("");
             cityField.setText("");
             stateField.setText("");

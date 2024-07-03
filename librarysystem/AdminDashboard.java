@@ -35,7 +35,7 @@ public class AdminDashboard extends JFrame implements  LibWindow {
     @Override
     public void init() {
         // Frame settings
-        setTitle("Main Dashboard");
+        setTitle("Main ");
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -47,6 +47,7 @@ public class AdminDashboard extends JFrame implements  LibWindow {
         menuAdjust();
         // Add right panel and button panel into a container
         rightContainer = new JPanel(new BorderLayout());
+        rightContainer.setBackground(Color.BLUE);
         rightContainer.add(new JPanel(), BorderLayout.BEFORE_FIRST_LINE);
 
         // Split pane
@@ -66,13 +67,13 @@ public class AdminDashboard extends JFrame implements  LibWindow {
         leftPanel = new JPanel();
         leftPanel.setLayout(new GridLayout(9, 1));
         leftPanel.setPreferredSize(new Dimension(WIDTH * 40 / 100, getHeight()));
-        leftPanel.setBackground(Color.LIGHT_GRAY);
+        leftPanel.setBackground(Color.white);
         leftPanel.setLayout(new BorderLayout(10, 10));
         leftNavPanel = new JPanel();
 
         leftNavPanel.setLayout(new GridLayout(9, 1));
         leftNavPanel.setPreferredSize(new Dimension(WIDTH * 40 / 100, getHeight()));
-        leftNavPanel.setBackground(Color.LIGHT_GRAY);
+        leftNavPanel.setBackground(Color.white);
         leftPanel.add(leftNavPanel, BorderLayout.CENTER);
 
 
@@ -104,7 +105,7 @@ public class AdminDashboard extends JFrame implements  LibWindow {
 
         if (user.getAuthorization() == Auth.ADMIN || user.getAuthorization() == Auth.BOTH) {
             //Admin
-            navItems.put("New Member", new AddNewMemberWindow());
+            navItems.put("Add Member", new AddNewMemberWindow());
             navItems.put("Add Book", new AddBookWindow());
         }
 
@@ -114,7 +115,7 @@ public class AdminDashboard extends JFrame implements  LibWindow {
         if (user.getAuthorization() == Auth.LIBRARIAN || user.getAuthorization() == Auth.BOTH) {
             //Librarian
             navItems.put("Book Check Out", new CheckOutBooksWindow());
-            navItems.put("Check Member Records", new CheckOutRecordWindow());
+            navItems.put("Get Records", new CheckOutRecordWindow());
             navItems.put("Check overDue", new OverDueBooksWindow());
         }
 
@@ -134,7 +135,7 @@ public class AdminDashboard extends JFrame implements  LibWindow {
                 selectedButton = button;
                 button.setForeground(Color.WHITE); // Change text color on hover
                 button.setOpaque(true); // Make background opaque
-                button.setBackground(Color.GRAY);
+                button.setBackground(Color.LIGHT_GRAY);
                 if (item.getValue() != null)
                     updateRightPanel(item.getValue());
             });

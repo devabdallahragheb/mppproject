@@ -24,11 +24,7 @@ public class CheckOutBooksWindow extends JPanel {
 
     public CheckOutBooksWindow() {
         SystemController system = new SystemController();
-        // Set up the JFrame
-        //setTitle("Check Out Books");
-        //setSize(1024, 500);
-        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // setLocationRelativeTo(null);
+
         setLayout(new BorderLayout());
         // Create a JPanel for the input components
         JPanel inputPanel = new JPanel();
@@ -56,9 +52,7 @@ public class CheckOutBooksWindow extends JPanel {
         // Add the input panel to the top of the frame
         add(inputPanel, BorderLayout.PAGE_START);
 
-        // Set up the table model and table
         String[] columnNames = {"Copy No.", "Book ISBN", "Checkout Date", "Due Date", "Library Member"};
-        //tableModel = new DefaultTableModel(columnNames, 0);
         tableModel = new DefaultTableModel(columnNames, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {

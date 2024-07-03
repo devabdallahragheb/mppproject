@@ -15,14 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 	      EventQueue.invokeLater(() -> 
 	         {
-	            //LibrarySystem.INSTANCE.setTitle("Library Application");
-	            //LibrarySystem.INSTANCE.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				//LibrarySystem.INSTANCE.init();
-	            //centerFrameOnDesktop(LibrarySystem.INSTANCE);
-	            //LibrarySystem.INSTANCE.setVisible(true);
 
-				//LibrarySystem.getLoginWindow().setVisible(true);
-				//Check the files
 				 new TestData().checkInitfiles();
 				 // Login
 
@@ -32,11 +25,6 @@ public class Main {
 				 centerFrameOnDesktop(LoginWindow.INSTANCE);
 				 LoginWindow.INSTANCE.setVisible(true);
 	         });
-
-
-
-		  // login
-		//sLibrarySystem.getLoginWindow()
 
 	   }
 	   
