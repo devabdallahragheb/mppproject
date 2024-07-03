@@ -173,17 +173,6 @@ public class LibrarySystem extends JFrame implements LibWindow {
 		public void actionPerformed(ActionEvent e) {
 			LibrarySystem.hideAllWindows();
 			AddBookWindow.INSTANCE.init();
-
-			//List<String> ids = ci.allBookIds();
-			//Collections.sort(ids);
-			//StringBuilder sb = new StringBuilder();
-			//for(String s: ids) {
-			//	sb.append(s + "\n");
-			//}
-			//System.out.println(sb.toString());
-			//AddBookWindow.INSTANCE.setData(sb.toString());
-			//AddBookWindow.INSTANCE.pack();
-			//AddBookWindow.INSTANCE.setSize(660,500);
 			Util.centerFrameOnDesktop(AddBookWindow.INSTANCE);
 			AddBookWindow.INSTANCE.setVisible(true);
 

@@ -59,7 +59,7 @@ public class SystemController implements ControllerInterface {
             String fname, String lname, String tel) throws AddNewMemberException {
         DataAccess da = new DataAccessFacade();
         if (da.readMemberMap().containsKey(memberID))
-            throw new AddNewMemberException("This member ID already exist");
+            throw new AddNewMemberException("This member ID already exist please check");
         Address address = new Address(street, city, state, zip);
         LibraryMember libraryMember = new LibraryMember(memberID, fname, lname, tel, address);
         da.saveNewMember(libraryMember);

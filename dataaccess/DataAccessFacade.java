@@ -18,12 +18,11 @@ import dataaccess.DataAccessFacade.StorageType;
 public class DataAccessFacade implements DataAccess {
 	
 	enum StorageType {
-		BOOKS, MEMBERS, USERS,CheckoutRecord,CheckoutEntry;
+		BOOKS, MEMBERS, USERS,CheckoutRecord;
 	}
 	
 	public static final String OUTPUT_DIR = System.getProperty("user.dir")+ "/dataaccess/storage"; //\src
-	public static final String DATE_PATTERN = "MM/dd/yyyy";
-	
+
 	//implement: other save operations
 	public void saveNewMember(LibraryMember member) {
 		HashMap<String, LibraryMember> mems = readMemberMap();
