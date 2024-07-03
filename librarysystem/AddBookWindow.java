@@ -116,10 +116,6 @@ public class AddBookWindow extends JPanel implements LibWindow  {
         panel.add(new JLabel(""));
         panel.add(addAuthorButton);
 
-        //panel.add(new JLabel(""));
-        //panel.add(new JScrollPane(authorTable));
-
-
         panel.add(new JLabel(""));
         panel.add(new JLabel(""));
 
@@ -244,41 +240,11 @@ public class AddBookWindow extends JPanel implements LibWindow  {
 
          isbnField,
         titleField,
-        // authorFirstNameField,
-        //authorLastNameField,
-        // authorTelephoneField,
-        // authorBioField,
-        // addressStreetField,
-        // addressCityField,
-        // addressStateField,
-         //addressZipField;
+
                 maxCheckoutLengthField,
          numberOfCopiesField
 
         };
     }
 
-/*
-    private void addBook() {
-        String isbn = isbnField.getText();
-        String title = titleField.getText();
-        //String authors = authorsField.getText();
-        List<Author> authors = new ArrayList<>();
-        int maxCheckoutLength = Integer.parseInt(maxCheckoutLengthField.getText());
-        int numberOfCopies = Integer.parseInt(numberOfCopiesField.getText());
-
-        Book book = new Book(isbn, title, maxCheckoutLength,authors, numberOfCopies);
-        ci.addBook(book);
-
-        JOptionPane.showMessageDialog(this, "Book added successfully!");
-
-        // Clear the fields
-        isbnField.setText("");
-        titleField.setText("");
-        authorsField.setText("");
-        maxCheckoutLengthField.setText("");
-        numberOfCopiesField.setText("");
-    }
-
- */
 }

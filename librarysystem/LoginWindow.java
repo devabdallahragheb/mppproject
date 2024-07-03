@@ -20,9 +20,6 @@ import business.LoginException;
 import business.SystemController;
 import dataaccess.User;
 
-import javax.swing.*;
-import java.awt.*;
-
 public class LoginWindow extends JFrame implements LibWindow {
 	public static  LoginWindow INSTANCE = new LoginWindow();
 	ControllerInterface ci = new SystemController();
@@ -32,8 +29,7 @@ public class LoginWindow extends JFrame implements LibWindow {
 	private JPanel mainPanel;
 	private JPanel upperHalf;
 	private JPanel middleHalf;
-	private JPanel lowerHalf;
-	private JPanel container;
+
 
 	private JPanel topPanel;
 	private JPanel middlePanel;
@@ -45,7 +41,7 @@ public class LoginWindow extends JFrame implements LibWindow {
 	private JTextField password;
 	private JLabel label;
 	private JButton loginButton;
-	private JButton logoutButton;
+
 
 	public boolean isInitialized() {
 		return isInitialized;
@@ -83,23 +79,16 @@ public class LoginWindow extends JFrame implements LibWindow {
 
 		defineUpperHalf();
 		defineMiddleHalf();
-		defineLowerHalf();
 
 		leftPanel.add(upperHalf, BorderLayout.NORTH);
 		leftPanel.add(middleHalf, BorderLayout.CENTER);
-		//leftPanel.add(lowerHalf, BorderLayout.SOUTH);
 
 		// Create right panel for image
 		JPanel rightPanel = new JPanel();
 		rightPanel.setLayout(new GridBagLayout());
 		rightPanel.setBackground(new Color(38, 109, 211));  // Set background color
 
-		JLabel imageLabel = new JLabel(new ImageIcon(LibrarySystem.ResourcesPath + "assets/LoginBG.png"));
-		imageLabel.setHorizontalAlignment(JLabel.CENTER);
-		imageLabel.setVerticalAlignment(JLabel.CENTER);
 
-		// Adjust image size to half the right panel
-		imageLabel.setPreferredSize(new Dimension(400, 300));
 
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = 0;
@@ -108,7 +97,6 @@ public class LoginWindow extends JFrame implements LibWindow {
 		gbc.weighty = 1.0;
 		gbc.fill = GridBagConstraints.BOTH;
 
-		rightPanel.add(imageLabel, gbc);
 
 		// Use JSplitPane to split left and right panels
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
@@ -144,14 +132,6 @@ public class LoginWindow extends JFrame implements LibWindow {
 		middleHalf.add(s, BorderLayout.SOUTH);
 	}
 
-	private void defineLowerHalf() {
-		//lowerHalf = new JPanel();
-		//lowerHalf.setLayout(new FlowLayout(FlowLayout.LEFT));
-
-		//JButton backButton = new JButton("<= Back to Main");
-		//addBackButtonListener(backButton);
-		//lowerHalf.add(backButton);
-	}
 
 	private void defineTopPanel() {
 		topPanel = new JPanel();
