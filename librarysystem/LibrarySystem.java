@@ -167,18 +167,7 @@ public class LibrarySystem extends JFrame implements LibWindow {
     }
 
 
-	class AddBookListener implements ActionListener {
 
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			LibrarySystem.hideAllWindows();
-			AddBookWindow.INSTANCE.init();
-			Util.centerFrameOnDesktop(AddBookWindow.INSTANCE);
-			AddBookWindow.INSTANCE.setVisible(true);
-
-		}
-
-	}
 
 	@Override
 	public boolean isInitialized() {
